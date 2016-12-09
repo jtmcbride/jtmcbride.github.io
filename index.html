@@ -21,6 +21,27 @@
 		  ga('create', 'UA-88757404-1', 'auto');
 		  ga('send', 'pageview');
 
+			function ScrollTo(name) {
+				  //init thread
+				  console.log(name)
+				  ScrollToResolver(document.getElementById(name));
+				}
+
+				function ScrollToResolver(elem) {
+				  var jump = parseInt(elem.getBoundingClientRect().top * .2);
+				  document.body.scrollTop += jump;
+				  document.documentElement.scrollTop += jump;
+				  //lastjump detects anchor unreachable, also manual scrolling to cancel animation if scroll > jump
+				  if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
+				    elem.lastjump = Math.abs(jump);
+				    setTimeout(function() {
+				      ScrollToResolver(elem);
+				    }, "100");
+				  } else {
+				    elem.lastjump = null;
+				  }
+				}
+
 		</script>
 	</head>
 	<body id="top">
@@ -44,8 +65,8 @@
 						</header>
 						<p>I am a software developer who is constantly looking for opportunities to learn and be challenged. I have a passion for problem solving and software development allows me the opportunity to create things that solve real world problems.</p>
 						<ul class="actions">
-							<li><a href="#projects" class="button">Projects</a></li>
-							<li><a href="#contact" class="button">Contact</a></li>
+							<li><span href="" onclick="ScrollTo('two')" class="button">Projects</span></li>
+							<li><span href="" onclick="ScrollTo('three')" class="button">Contact</span></li>
 						</ul>
 					</section>
 
@@ -77,8 +98,9 @@
 								
 							</article>
 						</div>
-						<ul class="actions">
+						<ul id="projects" class="actions">
 							<li><a href="https://github.com/jtmcbride" class="button">Github</a></li>
+							<li><a href="https://drive.google.com/file/d/0B0KDKiQOqcbedkJNeUhwYmdrY0k/view?usp=sharing" class="button">Resume</a></li>
 						</ul>
 					</section>
 
@@ -448,6 +470,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				(function(){
+					document.getElementsByClass
+				})()
+			</script>
 	</body>
 </html>
