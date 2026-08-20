@@ -1,163 +1,486 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joseph McBride — Software Engineer</title>
-<style>
-  :root {
-    --bg: #0f1115;
-    --card: #171a21;
-    --accent: #4f8cff;
-    --text: #e6e9ef;
-    --muted: #9aa4b2;
-    --border: #262b36;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 64px 24px 32px;
-    text-align: center;
-  }
-  header h1 { font-size: 2.4rem; margin: 0 0 8px; }
-  header p.tagline { color: var(--muted); font-size: 1.1rem; max-width: 640px; margin: 0 auto 24px; }
-  .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .links a {
-    color: var(--text); background: var(--card); border: 1px solid var(--border);
-    padding: 10px 18px; border-radius: 8px; text-decoration: none; font-size: 0.95rem;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .links a:hover { border-color: var(--accent); transform: translateY(-2px); }
-  main { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; }
-  h2.section-title { font-size: 1.5rem; margin: 48px 0 24px; border-left: 4px solid var(--accent); padding-left: 12px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
-  .card .shot {
-    aspect-ratio: 16/9; background: linear-gradient(135deg, #1b2030, #262b3c);
-    display: flex; align-items: center; justify-content: center; color: var(--muted);
-    font-size: 0.85rem; text-align: center; padding: 12px; border-bottom: 1px solid var(--border);
-  }
-  .card .shot img { width: 100%; height: 100%; object-fit: cover; }
-  .card-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
-  .card-body h3 { margin: 0 0 8px; font-size: 1.15rem; }
-  .card-body .desc { color: var(--muted); font-size: 0.92rem; flex: 1; margin-bottom: 14px; }
-  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
-  .tag { font-size: 0.72rem; background: #1e2433; color: var(--accent); padding: 3px 8px; border-radius: 999px; border: 1px solid var(--border); }
-  .card-links { display: flex; gap: 10px; }
-  .card-links a { font-size: 0.85rem; color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; }
-  .card-links a:hover { background: #1e2433; }
-  footer { text-align: center; padding: 32px 24px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
-  footer a { color: var(--accent); text-decoration: none; }
-</style>
-</head>
-<body>
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Joe McBride</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<header>
-  <h1>Joseph McBride</h1>
-  <p class="tagline">Senior Software Engineer with 9+ years building high-scale SaaS platforms and enterprise software using Python, Django, PostgreSQL, AWS, and React. Focused lately on ML/AI-driven workflow automation, real-time data pipelines, and applied machine learning.</p>
-  <div class="links">
-    <a href="https://github.com/jtmcbride" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/josephmcbride/" target="_blank">LinkedIn</a>
-    <a href="assets/Joseph-McBride-Resume.pdf" target="_blank">Resume (PDF)</a>
-    <a href="mailto:jtmcbride91@gmail.com">Email</a>
-  </div>
-</header>
+		  ga('create', 'UA-88757404-1', 'auto');
+		  ga('send', 'pageview');
 
-<main>
-  <h2 class="section-title">Recent Projects</h2>
-  <div class="grid">
+			function ScrollTo(name) {
+				  //init thread
+				  console.log(name)
+				  ScrollToResolver(document.getElementById(name));
+				}
 
-    <div class="card">
-      <div class="shot">Statcast pitch-map &amp; hot/cold zone screenshot placeholder</div>
-      <div class="card-body">
-        <h3>Baseball Analytics Platform</h3>
-        <div class="tags"><span class="tag">Python</span><span class="tag">ML</span><span class="tag">Postgres</span><span class="tag">Statcast</span></div>
-        <p class="desc">Interactive Statcast analytics platform with pitch-level visualization, smoothed hot/cold zone maps, and a next-pitch ML predictor. Local-first design with a config-driven path to hosted Postgres.</p>
-        <div class="card-links"><a href="https://github.com/jtmcbride/baseball" target="_blank">GitHub →</a></div>
-      </div>
-    </div>
+				function ScrollToResolver(elem) {
+				  var jump = parseInt(elem.getBoundingClientRect().top * .2);
+				  document.body.scrollTop += jump;
+				  document.documentElement.scrollTop += jump;
+				  //lastjump detects anchor unreachable, also manual scrolling to cancel animation if scroll > jump
+				  if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
+				    elem.lastjump = Math.abs(jump);
+				    setTimeout(function() {
+				      ScrollToResolver(elem);
+				    }, "100");
+				  } else {
+				    elem.lastjump = null;
+				  }
+				}
 
-    <div class="card">
-      <div class="shot">Flask photo-gallery app screenshot placeholder</div>
-      <div class="card-body">
-        <h3>Thoe</h3>
-        <div class="tags"><span class="tag">Flask</span><span class="tag">Python</span></div>
-        <p class="desc">A small Flask web app that serves a randomized rotating photo gallery, with a special date-aware mode for Valentine's Day. A lightweight example of server-rendered templating and dynamic asset selection.</p>
-        <div class="card-links"><a href="https://github.com/jtmcbride/thoe" target="_blank">GitHub →</a></div>
-      </div>
-    </div>
+		</script>
+	</head>
+	<body id="top">
 
-    <div class="card">
-      <div class="shot">AWS Cognito auth flow screenshot placeholder</div>
-      <div class="card-body">
-        <h3>Cognito Authentication</h3>
-        <div class="tags"><span class="tag">AWS Amplify</span><span class="tag">Cognito</span><span class="tag">React</span><span class="tag">Ant Design</span></div>
-        <p class="desc">Login and protected-route examples built with AWS Amplify and Cognito's withAuthenticator higher-order component, styled with Ant Design for a consistent parent/child UI, based on "Full Stack Serverless."</p>
-        <div class="card-links"><a href="https://github.com/chasko-labs/cognito-authentication" target="_blank">GitHub →</a></div>
-      </div>
-    </div>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Joe McBride</strong></h1>
+					<h1>Software Developer</h1>
+				</div>
+			</header>
 
-    <div class="card">
-      <div class="shot">CLI tool terminal output screenshot placeholder</div>
-      <div class="card-body">
-        <h3>OPSWAT CLI Client</h3>
-        <div class="tags"><span class="tag">Python</span><span class="tag">CLI</span><span class="tag">Security</span></div>
-        <p class="desc">A command-line client for interacting with OPSWAT security scanning services, built for scripted and automated file-analysis workflows.</p>
-        <div class="card-links"><a href="https://github.com/jtmcbride/opswat-cli-client" target="_blank">GitHub →</a></div>
-      </div>
-    </div>
+		<!-- Main -->
+			<div id="main">
 
-    <div class="card">
-      <div class="shot">Google Maps optimized route screenshot placeholder</div>
-      <div class="card-body">
-        <h3>Traveling Salesman Optimizer</h3>
-        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Google Maps API</span><span class="tag">Algorithms</span></div>
-        <p class="desc">A Google Maps application for optimizing routes based on the classic traveling salesman problem, with a live deployed demo on GitHub Pages.</p>
-        <div class="card-links">
-          <a href="https://github.com/jtmcbride/traveling-salesman" target="_blank">GitHub →</a>
-          <a href="https://jtmcbride.github.io/traveling-salesman/" target="_blank">Live Demo →</a>
-        </div>
-      </div>
-    </div>
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2></h2>
+						</header>
+						<p>
+							My name is Joe, I’m a software developer from San Francisco. I am constantly looking for opportunities to learn and be challenged. I have a passion for problem solving and software development allows me the opportunity to create things that solve real world problems. I have experience across the full stack of web development with modern libraries and frameworks like React, Redux, Rails and Django.
+						</p>
+						<p>
+							I graduated from UC Davis with a degree in Biochemistry. My interest in software began when I started studying bioinformatics and learned Python. Since then I have learned several languages, built full stack web applications and am always looking to learn more.
+						</p>
+						<ul class="actions">
+							<li><span href="" onclick="ScrollTo('two')" class="button">Projects</span></li>
+							<li><span href="" onclick="ScrollTo('three')" class="button">Contact</span></li>
+						</ul>
+					</section>
 
-    <div class="card">
-      <div class="shot">Baseball stats chart screenshot placeholder</div>
-      <div class="card-body">
-        <h3>Baseball Graphs + BaseballDB API</h3>
-        <div class="tags"><span class="tag">Ruby</span><span class="tag">API</span><span class="tag">Data Viz</span></div>
-        <p class="desc">A historical baseball statistics API (BaseballDB) paired with a front-end charting app that visualizes player and team trends over time.</p>
-        <div class="card-links">
-          <a href="https://github.com/jtmcbride/baseball-graphs" target="_blank">GitHub →</a>
-          <a href="https://github.com/jtmcbride/baseballDB" target="_blank">API Repo →</a>
-        </div>
-      </div>
-    </div>
+				<!-- Two -->
+					<section id="two">
+						<h2>Projects<a name="projects"></a></h2>
+						<div class="row">
+							<article class="6u 12u$(xsmall) work-item">
+								<img src="images/dftm.gif" alt="" class="image fit thumb" /><a href="https://dontforgetmilk.herokuapp.com" class="live-link">Live<a href="https://github.com/jtmcbride/DontForgetTheMilk">Github</a></a>
+								<h3>Don't Forget The Milk</h3>
+								<p>
+									Single page web application for organizing to-do lists. Don't Forget The Milk runs on a Ruby on Rails backend with a React/Redux frontend. It utilizes optimized SQL queries on the backend and optimistic updating of Redux state on the frontend to make it fast and responsive.
+								</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<img class="image fit thumb" src="http://totalsportscomplex.com/wp-content/uploads/2014/09/baseball-pic.jpg" alt="" /><a href="https://github.com/jtmcbride/baseballDB">Github</a>
+								<h3>BaseballDB</h3>
+								<p>
+									A web API for baseball statistics. BaseballDB allows developers to utilize the API to get conveniently formatted JSON responses of a range of statistics. BaseballDB runs on a Django backend hosted on AWS EC2.
+								</p>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<img src="images/tree.gif" alt="Tree" class="image fit thumb" /><a href="http://jtmcbride.github.io/baseball-graphs" class="live-link">Live<a href="https://github.com/jtmcbride/baseball-graphs">Github</a></a>
+								<h3>Baseball Graphs</h3>
+								<p>A React and D3.js application for visualizing data from the BaseballDB API. It seamlessly integrate D3's DOM manipulation with React's quick updaating and data organization.</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<img class="image fit thumb" src="images/traveling-salesman.gif" alt="" /><a href="http://jtmcbride.github.io/traveling-salesman" class="live-link">Live</a><a href="https://github.com/jtmcbride/traveling-salesman">Github</a>
+								<h3>Traveling Salesman</h3>
+								<p>The Traveling Salesman application optimizes the classic computer science problem of the same name. Using real world data from the Google Maps API, the application attempts to find the shortest route between all points using a simulated annealing algorithm.</p>
+								
+							</article>
+						</div>
+						<ul id="projects" class="actions">
+							<li><a href="https://github.com/jtmcbride" class="button">Github</a></li>
+<!-- 							<li><a href="https://drive.google.com/file/d/1uEjqX5TMnqJsTRC8is1L52JFPjT6fOcM/view" target="_blank" class="button">Resume</a></li> -->
+						</ul>
+					</section>
 
-  </div>
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch<a name="contact"></a></h2>
+						<p></p>
+							<div class="4u$ 12u$(small)">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon fa-home"><span class="label">City</span></h3>
+										San Francisco, CA
+									</li>
+									<li>
+										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+										415-299-0565
+									</li>
+									<li>
+										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+										<a href="mailto:jtmcbride91@gmail.com">jtmcbride91@gmail.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
 
-  <h2 class="section-title">About</h2>
-  <p style="color: var(--muted); max-width: 760px;">
-    I'm a Senior Software Engineer based in the San Francisco Bay Area with a background in Python/Django backends,
-    React frontends, and PostgreSQL-heavy systems at scale. At Darwin Homes I owned an AI-optimized workflow automation
-    platform supporting thousands of daily operations and led performance work that cut query latency by half during a
-    10x traffic increase. I'm currently exploring roles that blend software engineering with applied machine learning
-    and real-time data systems, and building side projects — from Statcast pitch prediction to auth patterns and route
-    optimization — to sharpen those skills.
-  </p>
-</main>
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
 
-<footer>
-  Built by Joseph McBride · <a href="https://github.com/jtmcbride" target="_blank">github.com/jtmcbride</a> ·
-  <a href="https://www.linkedin.com/in/josephmcbride/" target="_blank">LinkedIn</a>
-</footer>
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
 
-</body>
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="6u 12u$(xsmall)">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button special">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button special small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button special">Special</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button big">Big</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button special fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button special fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button special icon fa-download">Icon</a></li>
+								<li><a href="#" class="button icon fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button special disabled">Special</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="12u$">
+										<div class="select-wrapper">
+											<select name="demo-category" id="demo-category">
+												<option value="">- Category -</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="4u$ 12u(small)">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="6u 12u$(small)">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="6u$ 12u$(small)">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="12u$">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/jtmcbride" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/josephmcbride" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:jtmcbride91@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<!-- <li>&copy; Untitled</li> --><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script>
+				(function(){
+					document.getElementsByClass
+				})()
+			</script>
+	</body>
 </html>
