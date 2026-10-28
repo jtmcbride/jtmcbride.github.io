@@ -1,5 +1,14 @@
 /* Project galleries follow the portfolio's existing type and green accent. */
-.project-feature { margin-bottom: 3em; }
+html { scroll-behavior: smooth; }
+#two, #three { scroll-margin-top: 2rem; }
+#two > .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5em; margin: 0; }
+#two > .row::before, #two > .row::after { display: none; }
+#two > .row > .work-item { width: auto; padding: 0; margin: 0; float: none; }
+#two > .row > .work-item:nth-child(n + 3) { border-top: 1px solid #e6e6e6; padding-top: 2.5em; }
+#two > .actions { margin-top: 2.5em; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 .work-item.project-feature h3 { font-size: 1.25em; margin-bottom: .6em; }
 .work-item.project-feature > p { font-size: .95em; line-height: 1.65; }
 .project-links { display: flex; gap: 1.2em; margin: 1em 0; font-size: .9em; }
@@ -26,6 +35,8 @@
 .project-viewer button:focus-visible { outline: 3px solid #49bf9d; outline-offset: 2px; }
 body.project-viewer-open { overflow: hidden; }
 @media (max-width: 480px) {
+  #two > .row { grid-template-columns: minmax(0, 1fr); gap: 2em; }
+  #two > .row > .work-item:nth-child(n + 2) { border-top: 1px solid #e6e6e6; padding-top: 2em; }
   .project-viewer { padding: .6em; }
   .project-viewer button { font-size: .8em; }
   .project-viewer img { height: 65vh; }

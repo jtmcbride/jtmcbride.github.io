@@ -22,27 +22,6 @@
 		  ga('create', 'UA-88757404-1', 'auto');
 		  ga('send', 'pageview');
 
-			function ScrollTo(name) {
-				  //init thread
-				  console.log(name)
-				  ScrollToResolver(document.getElementById(name));
-				}
-
-				function ScrollToResolver(elem) {
-				  var jump = parseInt(elem.getBoundingClientRect().top * .2);
-				  document.body.scrollTop += jump;
-				  document.documentElement.scrollTop += jump;
-				  //lastjump detects anchor unreachable, also manual scrolling to cancel animation if scroll > jump
-				  if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
-				    elem.lastjump = Math.abs(jump);
-				    setTimeout(function() {
-				      ScrollToResolver(elem);
-				    }, "100");
-				  } else {
-				    elem.lastjump = null;
-				  }
-				}
-
 		</script>
 	</head>
 	<body id="top">
@@ -69,8 +48,8 @@
 I turn complex problems into reliable, intuitive systems—from intelligent workflows and real-time data applications to polished end-user experiences.
 						</p>
 						<ul class="actions">
-							<li><span href="" onclick="ScrollTo('two')" class="button">Projects</span></li>
-							<li><span href="" onclick="ScrollTo('three')" class="button">Contact</span></li>
+							<li><a href="#two" class="button">Projects</a></li>
+							<li><a href="#three" class="button">Contact</a></li>
 						</ul>
 					</section>
 
